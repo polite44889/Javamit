@@ -21,8 +21,8 @@
                 <input type="hidden" name="id" value="0">
                 Введіть дані <br>
                 <input type="hidden" name="title" value="Submited"/>
-                <input type="text" name="name" placeholder="Your name" required><br/>
-                <input type="number" name="age" placeholder="Age" required><br/>
+                <input type="text" name="name" placeholder="Введіть ваше імя" required><br/>
+                <input type="number" name="age" placeholder="Вік" required><br/>
                 <button class="button" type="submit">Відправити</button>
             </form>
 </div>

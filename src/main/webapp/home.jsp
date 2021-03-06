@@ -23,7 +23,7 @@
     
 </style>
 
-<h1 class="title">Welcome!</h1>
+<h1 class="title">Заповнення анкети імя та вік</h1>
             <%List<Data> dataList = (List<Data>) request.getAttribute("data");%>
             <div class="table"> 
                 <table>
