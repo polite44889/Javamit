@@ -1,5 +1,5 @@
 
-package org.obrii.mit.db2021.yaroshchuk.dp2021yaroshchuk.servlet;
+package org.obrii.mit.db2021.yaroshchuk.servlet;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

@@ -2,11 +2,11 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>DataServlet</servlet-name>
-        <servlet-class>org.obrii.mit.db2021.yaroshchuk.dp2021yaroshchuk.servlet.DataServlet</servlet-class>
+        <servlet-class>org.obrii.mit.db2021.yaroshchuk.servlet.DataServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Form</servlet-name>
-        <servlet-class>org.obrii.mit.db2021.yaroshchuk.dp2021yaroshchuk.servlet.Form</servlet-class>
+        <servlet-class>org.obrii.mit.db2021.yaroshchuk.servlet.Form</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>DataServlet</servlet-name>

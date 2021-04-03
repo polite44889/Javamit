@@ -1,12 +1,21 @@
 
-package org.obrii.mit.db2021.yaroshchuk.dp2021yaroshchuk.data;
+package org.obrii.mit.db2021.yaroshchuk.data;
 
+import org.springframework.data.annotation.Id;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import java.io.Serializable;
 import java.util.Arrays;
 
+@Entity
 public class Data implements Serializable{
-    
-    private int id;
+    @javax.persistence.Id
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+
+    private long id;
     private String name;
     private int age;
 
@@ -19,14 +28,7 @@ public class Data implements Serializable{
         this.age = age;
     }
 
-    public int getId() {
-        return id;
-    }
-    public void setId(int id) {
-        this.id = id;
-    }
-    
-    
+
     public String getName() {
         return name;
     }
@@ -52,11 +54,12 @@ public class Data implements Serializable{
         return sb.toString();
     }
 
- 
-   
-  
-    
-    
-    
-    
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
+    }
 }

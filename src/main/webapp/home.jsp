@@ -1,5 +1,6 @@
-<%@page import="org.obrii.mit.db2021.yaroshchuk.dp2021yaroshchuk.data.Data"%>
+
 <%@page import="java.util.List"%>
+<%@ page import="org.obrii.mit.db2021.yaroshchuk.data.Data" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <style>
