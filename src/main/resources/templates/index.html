@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spring Boot MVC</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                background-color: yellow;
+            }
+
+            .title{
+                text-align: center;
+            }
+
+            .table{
+                display: flex;
+                justify-content: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1 class="title">Заповнення анкети імя та вік</h1>
+        <div th:switch="${users}">
+            <div class="table" th:case="*">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>name</th>
+                            <th>age</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="user : ${users}">
+                            <td th:text="${user.id}"></td>
+                            <td th:text="${user.name}"></td>
+                            <td th:text="${user.age}"></td>
+                            <td><a th:href="@{/edit/{id}(id=${user.id})}">Edit</a></td>
+                            <td><a th:href="@{/delete/{id}(id=${user.id})}">Delete</a></td>
+                        </tr>
+                    </tbody>
+                </table/>
+                <a href="./signup">Add a new user</a>
+            </div>
+        </div>
+
+
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Update user</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                background-color: yellow;
+            }
+
+            .title{
+                text-align: center;
+            }
+
+            .formik{
+                display: flex;
+                justify-content: center;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <div class="formik">
+            <form action="#"
+                  th:action="@{./update/{id}(id=${user.id})}"
+                  th:object="${user}"
+                method="post">
+
+                <label for="name">Name</label>
+                <input type="text" th:field="*{name}" id="name" placeholder="Name">
+                <label for="age">Age</label>
+                <input type="text" th:field="*{age}" id="age" placeholder="Age">
+                <input type="submit" value="Оновити">
+            </form>
+        </div>
+    </body>
+</html>
