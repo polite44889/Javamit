@@ -1,4 +1,4 @@
-package org.obrii.mit.db2021.yaroshchuk;
+package org.obrii.dp2021.yaroshchuk;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -7,7 +7,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(RestJpaConsumerApplication.class);
+		return application.sources(RestConsumerApplication.class);
 	}
 
 }

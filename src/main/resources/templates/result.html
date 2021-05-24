@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                background-color: yellow;
+            }
+
+            .title{
+                text-align: center;
+            }
+
+            .table{
+                display: flex;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div>Мій додаток</div>
+
+        <form action="/dp2021Yaroshchuk/Lab7cons/add" method="post">
+            <input type="text" name="name" placeholder="Введіть ім'я"/>
+            <input type="text" name="age" placeholder="Введіть вік"/>
+            <input type="submit" value="Додати користувача"/>
+        </form>   <br> <br> <br>
+
+        <div th:each="student:${students}">
+            <p th:text="${student.name}"></p>
+            <p th:text="${student.age}"></p>
+
+
+            <form action="/dp2021Yaroshchuk/Lab7cons/update" method="post">
+                <input type="hidden" name="url" th:value="${student.getHref()}">
+                <input type="text" name="name" th:value="${student.name}"/>
+                <input type="text" name="age" th:value="${student.age}"/>
+                <input type="submit" value="update"/>
+            </form>     
+
+            <form action="/dp2021Yaroshchuk/Lab7cons/delete" method="post">
+                <input type="hidden" name="url" th:value="${student.getHref()}">                
+                <input type="submit" value="delete"/>
+            </form>     
+
+
+
+
+        </div>
+
+    </body>
+</html>
