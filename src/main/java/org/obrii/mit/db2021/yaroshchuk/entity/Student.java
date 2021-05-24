@@ -3,39 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.obrii.mit.dp2021.yaroshchuk.user;
+package org.obrii.mit.db2021.yaroshchuk.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 
-
+/**
+ *
+ * @author 38068
+ */
 @Entity
-public class User {
+public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-
-    @NotBlank(message = "Name is mandatory")
     private String name;
-
-    @NotNull(message = "Age is mandatory")
     private int age;
 
-    public User() {
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                '}';
+    public Student() {
     }
 
     public long getId() {
@@ -54,7 +42,6 @@ public class User {
         this.name = name;
     }
 
-
     public int getAge() {
         return age;
     }
@@ -62,6 +49,17 @@ public class User {
     public void setAge(int age) {
         this.age = age;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Student{id=").append(id);
+        sb.append(", name=").append(name);
+        sb.append(", age=").append(age);
+        sb.append('}');
+        return sb.toString();
+    }
+    
+    
+
 }
-
-

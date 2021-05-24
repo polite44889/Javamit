@@ -1,13 +1,13 @@
-package org.obrii.mit.dp2021.yaroshchuk;
+package org.obrii.mit.db2021.yaroshchuk;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class App {
+public class RestJpaConsumerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(App.class, args);
+		SpringApplication.run(RestJpaConsumerApplication.class, args);
 	}
 
 }
