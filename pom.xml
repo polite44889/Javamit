@@ -8,7 +8,7 @@
         <version>2.4.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>org.obrii.mit.dp2021</groupId>
+    <groupId>org.obrii.mit.dp2021.yaroshchuk</groupId>
     <artifactId>App</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
